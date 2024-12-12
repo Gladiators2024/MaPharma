@@ -9,6 +9,11 @@
 #include <QtCharts/QChart>
 #include<QDebug>
 #include"generateurpdf.h"
+#include "arduino.h"
+#include "arduino.cpp"
+
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -327,5 +332,63 @@ void MainWindow::on_pdfbtn_clicked()
                     QMessageBox::warning(this, "Erreur", "Le modèle n'est pas de type QSqlQueryModel.");
                 }
             }
+}
+
+void MainWindow::openDoor() {
+    QByteArray command = "open\n";  // Command to send to Arduino
+    command = command.toLower();   // Convert to lowercase
+    qDebug() << "Sending command to Arduino:" << command;
+    A.write_to_arduino(command);    // Send the command
+}
+
+QString buffer;  // Declare a buffer to accumulate fragments
+
+void MainWindow::update_label() {
+    QByteArray data = A.read_from_arduino();  // Read data from Arduino
+    qDebug() << "Raw data received from Arduino:" << data;
+
+    buffer.append(QString(data));  // Append the new fragment to the buffer
+
+    // Check if the buffer contains the delimiter for the end of the UID
+    if (buffer.contains("\r\n")) {
+        QString UID = buffer.trimmed();  // Trim spaces or newlines
+        buffer.clear();  // Clear the buffer after processing the UID
+        qDebug() << "Complete UID received:" << UID;
+
+        // Convert UID to uppercase to ensure case consistency
+        UID = UID.toUpper();
+        if (!UID.isEmpty()) {
+            QSqlQuery query;
+            query.prepare("SELECT NOM_EMP, PRENOM_EMP FROM EYA.EMPLOYES WHERE CARD_UID = :uid");
+            query.bindValue(":uid", UID);
+
+            if (query.exec() && query.next()) {
+                QString name = query.value("NOM_EMP").toString();  // Fetch name
+                QString last_name = query.value("PRENOM_EMP").toString();
+                QString fullName = name + " " + last_name;
+                qDebug() << "Access granted for:" << name;
+                ui->label_14->setText("Access granted!");
+                ui->label_17->setText("Employee: " + fullName);
+                openDoor();
+                QTimer::singleShot(4000, this, [this]() {
+                        ui->label_14->clear();
+                        ui->label_17->clear();
+                });
+
+            } else {
+                qDebug() << "Access denied: UID not found in database.";
+                QTimer::singleShot(3000, this, [this]() {
+                        ui->label_16->setText("Access denied: Invalid UID!");
+
+                });
+                ui->label_16->clear();
+            }
+        } else {
+            qDebug() << "Empty UID detected.";
+            ui->label_16->setText("No UID detected!");
+        }
+    } else {
+        qDebug() << "Waiting for more data to complete the UID.";
+    }
 }
 

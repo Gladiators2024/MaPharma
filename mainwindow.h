@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include "transaction.h"
+#include "arduino.h"
 #include <QMainWindow>
 
 namespace Ui {
@@ -14,6 +15,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void openDoor();
+    void update_label();
 
 private slots:
 
@@ -53,11 +56,14 @@ private slots:
 
     void on_pdfbtn_clicked();
 
+
 private:
     Ui::MainWindow *ui;
     Transactions Etmp; // Remplacer l'objet Client par un objet Transaction
      bool test; // Ajout de la déclaration de la variable 'test'
      QString recherechtyp;
+     arduino A;               // Arduino object for communication
+
 };
 
 

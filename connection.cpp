@@ -10,6 +10,6 @@ bool connection::createconnection()
   if(db.open()) test=true;//Comme db est de type QSqlDatabase, il hérite automatiquement de toutes les méthodes publiques de QSqlDatabase, y compris open().
   return test;
 }
-//
+
 void connection ::closeConnection()
 {db.close();}//Qt ferme la connexion active à la base de données associée.
