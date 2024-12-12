@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1440</width>
+    <height>641</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(217, 255, 218);
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame2">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>80</y>
+      <width>321</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(58, 116, 82);
+color: rgb(255, 255, 255);
+ font: 87 9pt &quot;Arial Black&quot;; 
+  border-radius: 10px ; /* Arrondi dans tous les coins */
+  border: 0px solid rgb(151, 181, 163); /* Bordure de la QLabel en couleur RGB spécifiée */   /*background-color: transparent;*/
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;Segoe UI Variable Display&quot;;</string>
+     </property>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;Segoe UI Variable Display&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Date</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;Segoe UI Variable Display&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>Type</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>131</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;Segoe UI Variable Display&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Montant</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;Segoe UI Variable Display&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Compte associe</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>260</y>
+       <width>131</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;Segoe UI Variable Display&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Mode de paiement</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="compteAssocieLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>60</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color :rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ajouterButton_clicked">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>380</y>
+       <width>75</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+font: 11pt &quot;Segoe UI Variable Display&quot;;
+background-color: rgb(224, 255, 230);
+ border-radius: 10px ; /* Arrondi dans tous les coins */
+
+</string>
+     </property>
+     <property name="text">
+      <string>Ajouter</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>251</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+font: 14pt &quot;Segoe UI Variable Display&quot;;
+background-color: rgb(174, 255, 123);</string>
+     </property>
+     <property name="text">
+      <string>        Ajouter une transaction</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_26">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;Segoe UI Variable Display&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Categorie</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="descriptionLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>310</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color :rgb(0, 0, 0);
+color :rgb(0, 0, 0);</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_27">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>310</y>
+       <width>131</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;Segoe UI Variable Display&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Description</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="id_lab">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>30</y>
+       <width>171</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 10px ; /* Arrondi dans tous les coins */
+  border: 0px solid rgb(151, 181, 163);
+color :rgb(0, 0, 0);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="type_combox">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>100</y>
+       <width>171</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color :rgb(0, 0, 0);</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>credit</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>debit</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>220</y>
+       <width>171</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color :rgb(0, 0, 0);</string>
+     </property>
+     <property name="maximum">
+      <double>99999.990000000005239</double>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="paymentbox">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>260</y>
+       <width>171</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color :rgb(0, 0, 0);</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>versemt</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>en ligne</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>cache</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="categorie_box">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>180</y>
+       <width>171</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color :rgb(0, 0, 0);</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>achat</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>vente</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QDateEdit" name="dateEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>140</y>
+       <width>171</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color :rgb(0, 0, 0);</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="modifierButton_clicked">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>380</y>
+       <width>75</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+font: 11pt &quot;Segoe UI Variable Display&quot;;
+background-color: rgb(224, 255, 230);
+ border-radius: 10px ; /* Arrondi dans tous les coins */
+
+</string>
+     </property>
+     <property name="text">
+      <string>Modifier</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="supprimerButton_clicked">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>380</y>
+       <width>75</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+font: 11pt &quot;Segoe UI Variable Display&quot;;
+background-color: rgb(224, 255, 230);
+ border-radius: 10px ; /* Arrondi dans tous les coins */
+
+</string>
+     </property>
+     <property name="text">
+      <string>Suprimer</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>1180</x>
+      <y>140</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;Segoe UI&quot;;
+font: 600 11pt &quot;Yu Gothic UI Semibold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Trier par :</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="tri_combox">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>170</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Date</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Compte associe</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Montant</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>140</y>
+      <width>621</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(87, 174, 129);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>-10</y>
+      <width>351</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 600 20pt &quot;Yu Gothic UI Semibold&quot;;
+ border-radius: 10px ; /* Arrondi dans tous les coins */
+  border: 0px solid rgb(151, 181, 163); /* Bordure de la QLabel en couleur RGB spécifiée */   /*background-color: transparent;*/
+background-color: rgb(134, 180, 153);
+</string>
+    </property>
+    <property name="text">
+     <string>         Gestion Financiere</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_28">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>109</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+font: 14pt &quot;Segoe UI Variable Display&quot;;
+background-color: rgb(174, 255, 123);
+  border-radius: 10px ; /* Arrondi dans tous les coins */
+  border: 0px solid rgb(151, 181, 163); /* Bordure de la QLabel en couleur RGB spécifiée */   /*background-color: transparent;*/</string>
+    </property>
+    <property name="text">
+     <string>     Liste des transactions</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_21">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>110</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+font: 11pt &quot;Segoe UI Variable Display&quot;;
+background-color: rgb(224, 255, 230);
+ border-radius: 10px ; /* Arrondi dans tous les coins */
+
+background-color: rgb(58, 116, 82);</string>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="recherche_combox">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>110</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Date</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Categorie</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QRadioButton" name="radioButton">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>220</y>
+      <width>83</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Croissant</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_2">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>240</y>
+      <width>83</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Decroisant</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="id_r">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>110</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="date_r">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>110</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="type_r">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>110</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>achat</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>vente</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_22">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>560</y>
+      <width>171</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+font: 11pt &quot;Segoe UI Variable Display&quot;;
+background-color: rgb(224, 255, 230);
+ border-radius: 10px ; /* Arrondi dans tous les coins */
+
+background-color: rgb(58, 116, 82);</string>
+    </property>
+    <property name="text">
+     <string>Statestique et historique</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pdfbtn">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>280</y>
+      <width>80</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+font: 11pt &quot;Segoe UI Variable Display&quot;;
+background-color: rgb(224, 255, 230);
+ border-radius: 10px ; /* Arrondi dans tous les coins */
+
+background-color: rgb(58, 116, 82);</string>
+    </property>
+    <property name="text">
+     <string>PDF</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="framestat" native="true">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>80</y>
+      <width>1201</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(217, 255, 218);
+</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_28">
+     <property name="geometry">
+      <rect>
+       <x>880</x>
+       <y>30</y>
+       <width>171</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+font: 11pt &quot;Segoe UI Variable Display&quot;;
+background-color: rgb(224, 255, 230);
+ border-radius: 10px ; /* Arrondi dans tous les coins */
+
+background-color: rgb(58, 116, 82);</string>
+     </property>
+     <property name="text">
+      <string>Quiter</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_12" native="true">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>60</y>
+       <width>541</width>
+       <height>381</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(174, 255, 123);
+color: rgb(255, 255, 255);
+ font: 87 9pt &quot;Arial Black&quot;; 
+  border-radius: 10px ; /* Arrondi dans tous les coins */
+  border: 0px solid rgb(151, 181, 163); /* Bordure de la QLabel en couleur RGB spécifiée */   /*background-color: transparent;*/
+</string>
+     </property>
+     <widget class="QLabel" name="label_39">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(206, 255, 199);
+background-color: rgb(95, 170, 103);</string>
+      </property>
+      <property name="text">
+       <string>    Statestique</string>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="graphicsView_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>501</width>
+        <height>301</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_13" native="true">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>60</y>
+       <width>451</width>
+       <height>381</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(174, 255, 123);
+
+ font: 87 9pt &quot;Arial Black&quot;; 
+  border-radius: 10px ; /* Arrondi dans tous les coins */
+  border: 0px solid rgb(151, 181, 163); /* Bordure de la QLabel en couleur RGB spécifiée */   /*background-color: transparent;*/
+</string>
+     </property>
+     <widget class="QLabel" name="label_40">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(206, 255, 199);
+background-color: rgb(95, 170, 103);</string>
+      </property>
+      <property name="text">
+       <string>       Historique</string>
+      </property>
+     </widget>
+     <widget class="QScrollArea" name="scrollArea_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>411</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>411</width>
+         <height>311</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <zorder>type_r</zorder>
+   <zorder>frame2</zorder>
+   <zorder>label_8</zorder>
+   <zorder>tri_combox</zorder>
+   <zorder>tableView</zorder>
+   <zorder>label_9</zorder>
+   <zorder>label_28</zorder>
+   <zorder>pushButton_21</zorder>
+   <zorder>recherche_combox</zorder>
+   <zorder>radioButton</zorder>
+   <zorder>radioButton_2</zorder>
+   <zorder>id_r</zorder>
+   <zorder>date_r</zorder>
+   <zorder>pushButton_22</zorder>
+   <zorder>pdfbtn</zorder>
+   <zorder>framestat</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1440</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
