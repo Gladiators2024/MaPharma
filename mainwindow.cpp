@@ -208,7 +208,7 @@ void MainWindow::on_pushButton_5_clicked()
 
 void MainWindow::on_pushButton_10_clicked()
 {
-    ui->tableView->setModel(medTmp.trier_par_quantite());
+    ui->tableView->setModel(medTmp.trier_par_quantite());//pour el commit//
 }
 
 
