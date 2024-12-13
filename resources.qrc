@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>thumbnail_looooogo.png</file>
+        <file>../../Downloads/messagerie.png</file>
+        <file>../../Downloads/image-removebg-preview (5).png</file>
+    </qresource>
+</RCC>
