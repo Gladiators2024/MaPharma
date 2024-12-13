@@ -7,7 +7,7 @@
 #include <iostream>
 #include <QList>
 using namespace std;
-
+/*hello*/
 class Medicament
 {
 private:
