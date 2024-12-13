@@ -48,7 +48,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Medicament medTmp;
-    Medicament med;
+
 };
 
 #endif // MAINWINDOW_H
