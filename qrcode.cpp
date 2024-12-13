@@ -13,6 +13,7 @@ using std::int8_t;
 using std::uint8_t;
 using std::size_t;
 using std::vector;
+/*go*/
 
 namespace qrcodegen {
 
