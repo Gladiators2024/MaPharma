@@ -191,7 +191,7 @@ void MainWindow::on_pushButton_4_clicked()
 
         if (model->rowCount() == 0) {
 
-            QMessageBox::information(this, "Recherche", "Aucun médicament trouvé avec cet I.");
+            QMessageBox::information(this, "Recherche", "Aucun médicament trouvé avec cet .");
         } else {
 
             ui->tableView_6->setModel(model);
