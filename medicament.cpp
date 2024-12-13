@@ -101,7 +101,7 @@ QSqlQueryModel* Medicament::chercher_med(int id_medicament) {
         qDebug() << "Erreur dans la requête SQL:" << query.lastError().text();
     }
 
-    model->setQuery(query);
+    model->setQuery(query); /*aloras*/
     return model;
 }
 QSqlQueryModel* Medicament::trier_par_id() {
